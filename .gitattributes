@@ -21,7 +21,5 @@ GNUmakefile make
 mk/version.sh export-subst
 .git* export-ignore
 mk/dev.mk export-ignore
-mk/flatpak.mk export-ignore
 mk/sha256sums.txt export-ignore
 showdown.doap export-ignore
-showdown.flatpakref export-ignore

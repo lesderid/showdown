@@ -1,12 +1,12 @@
 {
-    "app-id": "io.gitlab.craigbarnes.Showdown",
+    "app-id": "net.lesderid.Showdown",
     "branch": "master",
     "runtime": "org.gnome.Platform",
     "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "showdown",
     "rename-icon": "showdown",
-    "rename-appdata-file": "io.gitlab.craigbarnes.Showdown.appdata.xml",
+    "rename-appdata-file": "net.lesderid.Showdown.appdata.xml",
 
     "finish-args": [
         "--filesystem=host:ro",
@@ -53,7 +53,7 @@
             "buildsystem": "simple",
             "sources": [{
                 "type": "git",
-                "url": "git://github.com/craigbarnes/showdown.git",
+                "url": "git://github.com/lesderid/showdown.git",
                 "branch": "master",
                 "disable-shallow-clone": true
             }],

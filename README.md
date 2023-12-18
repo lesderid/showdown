@@ -1,28 +1,21 @@
-Project Status
-==============
-
-**Unmaintained**
-
-I've lost all interest in working on GTK projects and probably
-won't be making any further updates to the showdown code.
-
-The [CADT] development model is stronger than ever in the GNOME
-ecosystem and I no longer find it worth the effort to fix the
-constant breakage it causes.
-
-- - -
-
 Showdown
 ========
+
+This repository is a fork of the [original
+Showdown](https://gitlab.com/craigbarnes/showdown/) by [Craig
+Barnes](https://gitlab.com/craigbarnes) with some additional features. Please
+note that no new release has been created yet, so for now, you should clone this
+repo for the new features.
 
 Showdown is a simple [Markdown] viewer written in [Vala] and [GTK].
 
 Features
 --------
 
-* Minimalist default stylesheet.
-* Table of contents navigation.
+* Minimalist default stylesheet
+* Table of contents navigation
 * Integrated search bar
+* Automatic reloading on file changes
 * User styles (`~/.config/showdown/stylesheet.css`)
 * User scripts (`~/.config/showdown/script.js`)
 
@@ -97,7 +90,7 @@ type caches should also be updated after *uninstallation*.
 License
 -------
 
-Copyright (C) 2015-2018 Craig Barnes
+Copyright (C) 2015-2018 Craig Barnes, Copyright (C) 2023 Les De Ridder
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the GNU [General Public License version 3], as published
@@ -121,5 +114,5 @@ Public License version 3 for more details.
 [desktop-file-utils]: https://www.freedesktop.org/wiki/Software/desktop-file-utils/
 [libxml2]: http://www.xmlsoft.org/
 [`DESTDIR`]: https://www.gnu.org/prep/standards/html_node/DESTDIR.html
-[install path variables]: https://gitlab.com/craigbarnes/showdown/blob/master/GNUmakefile#L9-L15
-[POSTINSTALL]: https://gitlab.com/craigbarnes/showdown/blob/master/GNUmakefile#L21-25
+[install path variables]: https://github.com/lesderid/showdown/blob/master/GNUmakefile#L9-L15
+[POSTINSTALL]: https://github.com/lesderid/showdown/blob/master/GNUmakefile#L21-25

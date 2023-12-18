@@ -2,10 +2,10 @@
 <component type="desktop-application">
   <name>Showdown</name>
   <summary>Simple Markdown viewer</summary>
-  <id>io.gitlab.craigbarnes.Showdown</id>
+  <id>net.lesderid.Showdown</id>
   <project_license>GPL-3.0</project_license>
   <metadata_license>CC0-1.0</metadata_license>
-  <developer_name>Craig Barnes</developer_name>
+  <developer_name>Les De Ridder</developer_name>
   <description>
     <p>
       Showdown is a simple application for rendering and viewing
@@ -13,7 +13,7 @@
     </p>
   </description>
   <launchable type="desktop-id">
-    io.gitlab.craigbarnes.Showdown.desktop
+    net.lesderid.Showdown.desktop
   </launchable>
   <provides>
     <binary>showdown</binary>
@@ -28,6 +28,6 @@
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
   </kudos>
-  <url type="homepage">https://gitlab.com/craigbarnes/showdown</url>
-  <url type="bugtracker">https://gitlab.com/craigbarnes/showdown/issues</url>
+  <url type="homepage">https://github.com/lesderid/showdown</url>
+  <url type="bugtracker">https://github.com/lesderid/showdown/issues</url>
 </component>

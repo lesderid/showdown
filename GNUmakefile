@@ -3,7 +3,6 @@ include mk/compat.mk
 include mk/util.mk
 include mk/discount.mk
 include mk/build.mk
--include mk/flatpak.mk
 -include mk/dev.mk
 
 # Installation directories (may be overridden on the command line)
@@ -25,7 +24,7 @@ define POSTINSTALL
  gtk-update-icon-cache -qtf '$(icondir)' || :
 endef
 
-APPID = io.gitlab.craigbarnes.Showdown
+APPID = net.lesderid.Showdown
 APPICON = showdown
 INSTALL = install
 INSTALL_DIR = $(INSTALL) -d -m755

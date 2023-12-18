@@ -60,7 +60,7 @@ class Showdown.Application: Gtk.Application {
 
     public Application() {
         Object (
-            application_id: "io.gitlab.craigbarnes.Showdown",
+            application_id: "net.lesderid.Showdown",
             flags: ApplicationFlags.HANDLES_COMMAND_LINE
         );
         document_template = get_string_from_resource("template.html");
@@ -126,10 +126,10 @@ class Showdown.Application: Gtk.Application {
             "program-name", "Showdown",
             "version", Config.VERSION,
             "comments", "Simple Markdown viewer",
-            "copyright", "Copyright 2015-2018 Craig Barnes",
+            "copyright", "Copyright 2015-2018 Craig Barnes, Copyright 2023 Les De Ridder",
             "logo-icon-name", "showdown",
             "license-type", Gtk.License.GPL_3_0,
-            "website", "https://gitlab.com/craigbarnes/showdown"
+            "website", "https://github.com/lesderid/showdown"
         );
     }
 
@@ -139,7 +139,7 @@ class Showdown.Application: Gtk.Application {
     }
 
     static string get_string_from_resource(string filename) {
-        const string resprefix = "/io/gitlab/craigbarnes/Showdown/";
+        const string resprefix = "/net.lesderid.Showdown/";
         const ResourceLookupFlags flags = ResourceLookupFlags.NONE;
         Bytes bytes;
         try {

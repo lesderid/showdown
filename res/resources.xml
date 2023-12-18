@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-    <gresource prefix="/io/gitlab/craigbarnes/Showdown">
+    <gresource prefix="/net.lesderid.Showdown">
         <file preprocess="xml-stripblanks">window.ui</file>
         <file>template.html</file>
         <file>error.html</file>
         <file>main.css</file>
     </gresource>
-    <gresource prefix="/io/gitlab/craigbarnes/Showdown/gtk">
+    <gresource prefix="/net.lesderid.Showdown/gtk">
         <file preprocess="xml-stripblanks">help-overlay.ui</file>
         <file preprocess="xml-stripblanks">menus.ui</file>
     </gresource>
-    <gresource prefix="/io/gitlab/craigbarnes/Showdown/icons/scalable/apps">
+    <gresource prefix="/net.lesderid.Showdown/icons/scalable/apps">
         <file preprocess="xml-stripblanks">showdown.svg</file>
     </gresource>
 </gresources>
