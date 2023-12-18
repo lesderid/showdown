@@ -118,7 +118,7 @@ class Showdown.Window: Gtk.ApplicationWindow {
             return;
         }
 
-        var md = Markdown.parse(text);
+        var md = Markdown.parse(text, (int) Showdown.Application.parser_flags);
         var body = md.render_html();
         var toc = md.render_html_toc();
         var stylesheet = app.default_stylesheet;

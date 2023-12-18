@@ -3,6 +3,7 @@ class Showdown.Application: Gtk.Application {
     internal string error_template;
     internal string default_stylesheet;
     internal bool default_headerbar_visibility = true;
+    internal static int64 parser_flags = 0x02001000;
 
     const ActionEntry[] actions = {
         {"new_window", new_window},
@@ -42,6 +43,11 @@ class Showdown.Application: Gtk.Application {
             "version", 'V', OptionFlags.NO_ARG,
             OptionArg.CALLBACK, (void *)print_version_and_exit,
             "Print version number and exit", null
+        },
+        {
+            "parser-flags", 'P', OptionFlags.NONE,
+            OptionArg.INT64, ref parser_flags,
+            "Discount Markdown parser flags", "0x02001000"
         },
         {null}
     };
