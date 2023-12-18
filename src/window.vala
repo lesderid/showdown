@@ -1,6 +1,7 @@
 [GtkTemplate(ui = "/io/gitlab/craigbarnes/Showdown/window.ui")]
 class Showdown.Window: Gtk.ApplicationWindow {
     string? filename = null;
+    FileMonitor? file_monitor = null;
     [GtkChild] unowned Gtk.HeaderBar header;
     [GtkChild] unowned Gtk.MenuButton menu_button;
     [GtkChild] unowned Gtk.SearchBar search_bar;
@@ -138,6 +139,21 @@ class Showdown.Window: Gtk.ApplicationWindow {
         mdview.load_html(doc, file.get_uri());
     }
 
+    void start_watch() {
+        if (file_monitor != null) {
+            file_monitor.cancel();
+        }
+
+        var file = File.new_for_path(filename);
+        try {
+            file_monitor = file.monitor_file(FileMonitorFlags.NONE);
+            file_monitor.changed.connect(reload);
+        } catch (Error e) {
+            show_error_page(e.message);
+            return;
+        }
+    }
+
     void show_error_page(string message) {
         header.title = "Markdown Viewer";
         header.subtitle = "";
@@ -148,6 +164,10 @@ class Showdown.Window: Gtk.ApplicationWindow {
     internal void load_file(string filename) {
         this.filename = filename;
         reload();
+
+        if (Showdown.Application.watch_file) {
+            start_watch();
+        }
     }
 
     void print() {

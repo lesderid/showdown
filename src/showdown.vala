@@ -4,6 +4,7 @@ class Showdown.Application: Gtk.Application {
     internal string default_stylesheet;
     internal bool default_headerbar_visibility = true;
     internal static int64 parser_flags = 0x02001000;
+    internal static bool watch_file = false;
 
     const ActionEntry[] actions = {
         {"new_window", new_window},
@@ -48,6 +49,11 @@ class Showdown.Application: Gtk.Application {
             "parser-flags", 'P', OptionFlags.NONE,
             OptionArg.INT64, ref parser_flags,
             "Discount Markdown parser flags", "0x02001000"
+        },
+        {
+            "watch", 'W', OptionFlags.NONE,
+            OptionArg.NONE, ref watch_file,
+            "Watch file for changes", null
         },
         {null}
     };
