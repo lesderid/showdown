@@ -1,4 +1,4 @@
-[GtkTemplate(ui = "/net.lesderid.Showdown/window.ui")]
+[GtkTemplate(ui = "/net/lesderid/Showdown/window.ui")]
 class Showdown.Window: Gtk.ApplicationWindow {
     string? filename = null;
     FileMonitor? file_monitor = null;

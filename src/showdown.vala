@@ -139,7 +139,7 @@ class Showdown.Application: Gtk.Application {
     }
 
     static string get_string_from_resource(string filename) {
-        const string resprefix = "/net.lesderid.Showdown/";
+        const string resprefix = "/net/lesderid/Showdown/";
         const ResourceLookupFlags flags = ResourceLookupFlags.NONE;
         Bytes bytes;
         try {
